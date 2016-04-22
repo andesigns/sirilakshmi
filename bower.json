@@ -1,0 +1,15 @@
+{
+  "name": "sirilakshmi",
+  "homepage": "https://github.com/andesigns/sirilakshmi",
+  "authors": [
+    "Anmol Nandha <anmol@andesigns.co.uk>"
+  ],
+  "description": "Yoga is your natural state",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3",
+    "font-awesome": "^4.6.1"
+  }
+}
