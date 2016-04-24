@@ -8,3 +8,329 @@ Description: Siri Lakshmi - Yoga is your natural state
 Version: 6.0
 Text Domain: sirilakshmi
 */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,400italic,700italic|Montserrat:400,700);
+/* ANIMATION */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+/* 1 GENERAL */
+body {
+  /* 1.1 BUTTONS */
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body p {
+  font-family: 'Lato';
+  font-weight: 300;
+}
+body a {
+  transition: background-color 0.5s ease;
+}
+body .btn-rounded-border {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+}
+body .btn-rounded-border:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: transparent;
+}
+/* 2. NAV */
+nav.navbar {
+  min-height: 70px;
+  border-bottom: 0;
+}
+nav.navbar-inverse {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+nav .navbar-header .navbar-toggle {
+  margin-top: 19px;
+  border-color: #333333;
+  border-radius: 50%;
+}
+nav .navbar-header .navbar-toggle .icon-bar {
+  width: 14px;
+  background-color: #333333;
+}
+nav .navbar-header .navbar-toggle:hover,
+nav .navbar-header .navbar-toggle:active {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+nav .navbar-header .navbar-toggle:hover .icon-bar,
+nav .navbar-header .navbar-toggle:active .icon-bar {
+  background-color: white;
+}
+nav .navbar-header .navbar-brand {
+  height: 70px;
+}
+nav .navbar-header .navbar-brand img {
+  width: 150px;
+}
+nav .navbar-collapse .navbar-nav li a {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: #666666;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-top: 32px;
+  padding-bottom: 18px;
+  background: url(../images/pointer.png) center 70px no-repeat;
+  transition: color 0.5s ease, background 0.5s ease;
+}
+nav .navbar-collapse .navbar-nav li a:hover {
+  color: black;
+  background: url(../images/pointer.png) center bottom no-repeat;
+}
+nav .navbar-collapse.in .navbar-nav li a {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: #666666;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: none;
+}
+nav .navbar-collapse.in .navbar-nav li a:hover {
+  color: black;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .navbar-collapse .navbar-nav li a {
+    font-size: 10px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block !important;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+}
+/* 3. PAGE BANNER */
+.page-banner {
+  height: 600px;
+}
+.page-banner h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 550px;
+  color: white;
+}
+.page-banner h1.delay {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.page-banner.home {
+  background: url(../images/shutterstock_284951039_web@1x.png) center no-repeat;
+  background-size: cover;
+}
+@media (max-width: 992px) {
+  .page-banner h1 {
+    margin-top: 280px;
+    font-size: 48px;
+    line-height: 42px;
+  }
+}
+/* 4. THERAPIES */
+.therapies {
+  padding-bottom: 75px;
+  background: url(../images/shutterstock_141029854.png) center no-repeat;
+  background-size: cover;
+}
+.therapies h1 {
+  margin-top: 75px;
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+.therapies hr {
+  margin-top: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5%;
+  border: 0;
+  border-bottom: 2px solid #cccccc;
+}
+.therapies a.thumbnail {
+  background: transparent;
+  border: 0;
+}
+/* 5. LATEST POST */
+.latest-post {
+  padding-left: 0;
+  padding-right: 0;
+  background: #eb5c2d;
+}
+.latest-post .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.latest-post .container-fluid .post-img {
+  padding: 0;
+}
+.latest-post .container-fluid .post-content {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.latest-post .container-fluid .post-content h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  color: white;
+}
+.latest-post .container-fluid .post-content hr {
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  height: 2px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.latest-post .container-fluid .post-content p {
+  font-size: 22px;
+  color: white;
+}
+@media (min-width: 1156px) and (max-width: 1297px) {
+  .latest-post .post-content h1 {
+    font-size: 32px !important;
+    text-align: center;
+  }
+  .latest-post .post-content p {
+    font-size: 18px !important;
+    color: white;
+  }
+}
+@media (min-width: 992px) and (max-width: 1155px) {
+  .latest-post .post-content h1 {
+    font-size: 24px !important;
+    text-align: center;
+  }
+  .latest-post .post-content hr {
+    margin-top: 18px !important;
+  }
+  .latest-post .post-content p {
+    font-size: 14px !important;
+    color: white;
+  }
+}
+@media (max-width: 991px) {
+  .latest-post .post-content h1 {
+    font-size: 24px !important;
+    text-align: center;
+  }
+  .latest-post .post-content hr {
+    margin-top: 18px !important;
+  }
+  .latest-post .post-content p {
+    font-size: 14px !important;
+    color: white;
+  }
+}
+/* 6. BLOG */
+.latest-blog {
+  padding-bottom: 75px;
+}
+.latest-blog h1 {
+  margin-top: 75px;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+}
+.latest-blog hr {
+  margin-top: 39px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5%;
+  border: 0;
+  border-bottom: 2px solid #cccccc;
+}
+.latest-blog .thumbnail {
+  padding: 0 !important;
+  border: 0;
+}
+.latest-blog .thumbnail .caption {
+  padding-left: 0;
+  padding-right: 0;
+}
+.latest-blog .thumbnail .caption a {
+  color: #333333;
+  transition: color 0.5s ease;
+}
+.latest-blog .thumbnail .caption a:hover {
+  color: #eb5c2d;
+  text-decoration: none;
+}
+/* 7. FOOTER */
+footer {
+  padding-top: 40px;
+  padding-bottom: 120px;
+  background-color: #cccccc;
+}
+footer p.social {
+  text-align: center;
+}
+footer p.social a {
+  color: #999999;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+footer p.social a:hover {
+  color: #666666;
+}
+footer p.copyright {
+  text-align: center;
+  color: #666666;
+}
