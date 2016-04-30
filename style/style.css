@@ -81,7 +81,7 @@ body .btn-rounded-border:hover {
 /* 2. NAV */
 nav.navbar {
   min-height: 70px;
-  border-bottom: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 nav.navbar-inverse {
   background-color: rgba(255, 255, 255, 0.8);
@@ -121,7 +121,8 @@ nav .navbar-collapse .navbar-nav li a {
   background: url(../images/pointer.png) center 70px no-repeat;
   transition: color 0.5s ease, background 0.5s ease;
 }
-nav .navbar-collapse .navbar-nav li a:hover {
+nav .navbar-collapse .navbar-nav li a:hover,
+nav .navbar-collapse .navbar-nav li a.active {
   color: black;
   background: url(../images/pointer.png) center bottom no-repeat;
 }
@@ -164,6 +165,7 @@ nav .navbar-collapse.in .navbar-nav li a:hover {
   text-align: center;
   line-height: 550px;
   color: white;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .page-banner h1.delay {
   -webkit-animation-delay: 0.7s;
@@ -173,6 +175,20 @@ nav .navbar-collapse.in .navbar-nav li a:hover {
 .page-banner.home {
   background: url(../images/shutterstock_284951039_web@1x.png) center no-repeat;
   background-size: cover;
+}
+.page-banner.about {
+  background: url(../images/shutterstock_193005704_web.png) center no-repeat;
+  background-size: cover;
+}
+.page-banner.about h1 {
+  color: #dd9933 !important;
+}
+.page-banner.classes {
+  background: url(../images/meditation-yoga-wallpaper.png) center no-repeat;
+  background-size: cover;
+}
+.page-banner.classes h1 {
+  color: #eb5c2d !important;
 }
 @media (max-width: 992px) {
   .page-banner h1 {
@@ -333,4 +349,121 @@ footer p.social a:hover {
 footer p.copyright {
   text-align: center;
   color: #666666;
+}
+/* 8. PAGE CONTENT */
+.page {
+  padding-top: 105px;
+  padding-bottom: 105px;
+  /* 8.1 ABOUT */
+  /* 8.2 CLASSES */
+}
+.page.about {
+  background: url(../images/meditating@2x.png) center bottom no-repeat;
+}
+.page.about h1 {
+  font-size: 31px;
+  line-height: 36px;
+}
+.page.about p {
+  margin-top: 35px;
+  font-size: 16px;
+  line-height: 30px;
+}
+.page.kundalini h1 {
+  font-size: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+.page.kundalini p {
+  margin-top: 35px;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+.page.kundalini .latest-class {
+  margin-top: 35px;
+  background: #d9d9d9;
+}
+.page.kundalini .latest-class .class-img {
+  padding-left: 0;
+}
+.page.kundalini .latest-class .class-info p {
+  text-align: left;
+  font-size: 21px;
+  line-height: 32px;
+}
+.page.classes {
+  background: #dd9933;
+}
+.page.classes h1 {
+  font-size: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+.page.classes p {
+  margin-top: 35px;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+.page.classes .classes-table {
+  margin-top: 35px;
+}
+.page.classes .classes-table thead th {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.page.classes .classes-table tbody td {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page.kundalini .latest-class .class-info p {
+    margin-top: 25px !important;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .page.classes .classes-table thead th {
+    font-size: 16px !important;
+  }
+  .page.classes .classes-table tbody td {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 991px) {
+  .page.kundalini .latest-class .class-info p {
+    margin-top: 15px !important;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .page.classes .classes-table thead th {
+    font-size: 14px !important;
+  }
+  .page.classes .classes-table tbody td {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 767px) {
+  .page.kundalini .latest-class .class-img {
+    padding-top: 15px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .page.classes .classes-table thead th {
+    font-size: 12px !important;
+  }
+  .page.classes .classes-table tbody td {
+    font-size: 12px !important;
+  }
 }
